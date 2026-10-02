@@ -22,8 +22,18 @@ fun main() = runBlocking {
 
     val startTime = System.currentTimeMillis()
 
-    // Kode kamu di sini...
+    // 1. Jalankan kedua fungsi secara PARALEL dengan async
+    val profileDeferred = async { fetchUserProfile("123") }
+    val postsDeferred = async { fetchUserPosts("123") }
 
+    // 2. Tunggu kedua hasil dengan await(), lalu cetak hasilnya
+    val profile = profileDeferred.await()
+    val posts = postsDeferred.await()
+
+    println(profile)
+    println("Posts: $posts")
+
+    // 3. Waktu eksekusi
     val endTime = System.currentTimeMillis()
     println("Waktu: ${endTime - startTime}ms")
 }
