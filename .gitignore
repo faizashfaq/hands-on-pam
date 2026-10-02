@@ -1,5 +1,14 @@
-# Tool/session state (oh-my-claudecode, dsb) — bukan bagian dari materi
-.omc/
+# Build & Compiled files
+**/bin/
+**/build/
+.gradle/
+.idea/
+*.class
 
-# OS cruft
+# Local configuration
+local.properties
+*.log
+
+# OS generated files
 .DS_Store
+Thumbs.db
