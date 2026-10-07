@@ -1,0 +1,14 @@
+# Build & Compiled files
+**/bin/
+**/build/
+.gradle/
+.idea/
+*.class
+
+# Local configuration
+local.properties
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
